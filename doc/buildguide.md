@@ -53,7 +53,7 @@ PCBの裏面
 
 ※向きを間違えたり，はんだ付けする前に強い力がかかるとピンが外れますので注意してください．また，足が折れ曲りやすいので抜き差しするときには注意して扱ってください．
 
-裏面を上にしてPCBのスルーホールに取り付けてください．はんだ付けしなくても固定されます（Peo Microとスプリングピンヘッダのみをはんだ付け）．
+裏面を上にしてPCBのスルーホールに取り付けてください．はんだ付けしなくても固定されます（Pro Microとスプリングピンヘッダのみをはんだ付け）．
 
 ![IMG_20190503_200645](https://user-images.githubusercontent.com/49835946/57136511-10034200-6de8-11e9-91f5-9c09cd50a049.jpg)
 
@@ -101,7 +101,7 @@ avrdude.exe done.  Thank you.
 QMK Toolboxを起動し，作成した`meishikbd_default.hex`を選択します．
 リセットボタンを押し，`Caterina device connected`と表示されたらFlashボタンを押します．
 
-![toolbox](https://user-images.githubusercontent.com/49835946/57139330-f5cd6200-6def-11e9-8e7b-6228bd132607.png)
+![toolbox](https://user-images.githubusercontent.com/49835946/57151657-6edab280-6e0c-11e9-87e4-d1b3cdcd83de.png)
 
 次のメッセージが表示されたら成功です．
 ```
