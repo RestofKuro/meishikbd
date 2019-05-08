@@ -1,28 +1,32 @@
 # meishikbd ビルドガイド
 
 
-## 部品
+## 内容物
 
 
 | 名前 | 数 | 備考 |
 | ---- | ---- | --- |
 | PCB | 1枚 | |
 | Pro Micro | 1個 | |
+| ピンヘッダ | 2個 | スプリングピンヘッダ(12P)も使用可能 |
 | タクトスイッチ | 1個 | |
-| ピンヘッダ | 2個 | スプリングピンヘッダ(12P)でも可 |
-| キースイッチ | 8個 | MX互換 |
+| キースイッチ | 8個 | Cherry MX互換 |
 | キーキャップ | 8個 | キースイッチと互換があるもの |
-| micro USBケーブル | 1本 | |
-| ゴム足 | 4個 | 必要に応じて |
 
-## 必要な道具
+## 別途必要な物
 
 | 名前 | 備考 |
 | ---- | ---- |
 | はんだごて |  |
 | 糸ハンダ | 0.8mm程度のものを推奨 |
+| micro USBケーブル | 通信のできるもの |
+## あると便利なもの
 
-
+| 名前 | 備考 |
+| ---- | ---- |
+| フラックス |  |
+| マスキングテープ | Pro Micro，スイッチの固定用 |
+| ゴム足 | 必要に応じて |
 
 ## 組み立て方
 PCBの表面
@@ -44,16 +48,9 @@ PCBの裏面
 下の写真のようにPro Microを実装してください．
 ピンヘッダを使用する場合は，両方はんだ付けをしてください．
 
-※スプリングヘッダを使用する場合  
+※スプリングヘッダを使用する場合は，[Helixのビルドガイド](https://github.com/MakotoKurauchi/helix/blob/master/Doc/buildguide_jp.md#pro-micro)を参考にしてください．
 
-スプリングピンヘッダには推奨する向きがあります．
 
-側面の小さい窓がPro Micro寄りになります．
-また，実装時には二本ともに小さい窓が同じ方向を向くようにしてください．
-
-※向きを間違えたり，はんだ付けする前に強い力がかかるとピンが外れますので注意してください．また，足が折れ曲りやすいので抜き差しするときには注意して扱ってください．
-
-裏面を上にしてPCBのスルーホールに取り付けてください．はんだ付けしなくても固定されます（Pro Microとスプリングピンヘッダのみをはんだ付け）．
 
 ![IMG_20190503_200645](https://user-images.githubusercontent.com/49835946/57136511-10034200-6de8-11e9-91f5-9c09cd50a049.jpg)
 
@@ -71,11 +68,12 @@ PCBの裏面
 ```
 git clone -b meishikbd https://github.com/RestofKuro/qmk_firmware.git
 ```
-次のコマンドで，必要なツールのインストールを行います．
+次のコマンドで，ディレクトリを移動し必要なツールのインストールを行います．
 ```
+cd qmk_firmware
 util/qmk_install.sh
 ```
-ファームウェアをPro Microに書き込みます．
+
 #### ファームウェアのビルド
 次のコマンドを実行します．
 ```
@@ -95,7 +93,7 @@ Detecting USB port, reset your controller now.
 ```
 avrdude.exe done.  Thank you.
 ```
-#### qmk toolbox場合
+#### QMK Toolbox場合
 [ここ](https://github.com/qmk/qmk_toolbox/releases)から，`qmk_toolbox.exe`をダウンロードします．
 
 QMK Toolboxを起動し，作成した`meishikbd_default.hex`を選択します．
