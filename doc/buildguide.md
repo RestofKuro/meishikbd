@@ -82,6 +82,8 @@ make meishikbd:default
 #### Linux, Mac, Msys2の場合
 次のコマンドを実行すると，ビルドと書き込みを同時に置こうことができます．
 
+実行権限が必要な場合は，`sudo`をつけて実行してください．
+
 ```
 make meishikbd:default:avrdude
 ```
