@@ -74,12 +74,12 @@ cd qmk_firmware
 util/qmk_install.sh
 ```
 
+#### Linux, Mac, Msys2の場合
 #### ファームウェアのビルド
 次のコマンドを実行します．
 ```
 make meishikbd:default
 ```
-#### Linux, Mac, Msys2の場合
 次のコマンドを実行すると，ビルドと書き込みを同時に置こうことができます．
 
 実行権限が必要な場合は，`sudo`をつけて実行してください．
@@ -95,7 +95,13 @@ Detecting USB port, reset your controller now.
 ```
 avrdude.exe done.  Thank you.
 ```
+#### Windowsの場合
+現在検証中です．
+デフォルトキーマップの場合は，QMK Toolboxを，キーマップを変更したい場合は，Msysの利用をお勧めします．
+Bash on Ubuntu on Windowsにて，ファームウェアのビルドすることが可能です．
+
 #### QMK Toolbox場合
+`meishikbd_default.hex`がこのリポジトリ内にあるのでダウンロードして使用してください．
 [ここ](https://github.com/qmk/qmk_toolbox/releases)から，`qmk_toolbox.exe`をダウンロードします．
 
 QMK Toolboxを起動し，作成した`meishikbd_default.hex`を選択します．
